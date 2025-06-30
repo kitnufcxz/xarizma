@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка</title>
+    <style>@font-face {
+            font-family: 'blackcraft';
+            src: url('blackcraft.ttf') format('truetype');
+            font-display: swap;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="family-messages"></div>
+    <div id="background-container">
+        <div id="background"></div>
+    </div>
+    
+    <div id="start-screen">
+        <div id="tap-to-continue">Tap to continue</div>
+    </div>
+
+    <div id="politik">Харизма</div>
+    
+    <div id="content">
+        <div id="info-text">Начинаю сбор информации исходя из метаданных твоего телефона</div>
+        <div id="final-text">Иди нахуй, я не доксер.</div>
+        <div id="loading">
+            <div>Загрузка <span id="loading-percent">5</span>%</div>
+            <div id="loading-bar">
+                <div id="loading-progress"></div>
+            </div>
+        </div>
+        
+        <div id="buttons-container">
+    <div class="round-button" data-card="1">
+        <img src="assets/images/discord.png" alt="Telegram Channel">
+    </div>
+    <div class="round-button" data-card="2">
+        <img src="assets/images/telegram.png" alt="Telegram Account">
+    </div>
+    <div class="round-button" data-card="3">
+        <img src="assets/images/quote.png" alt="Telegram Channel">
+    </div>
+</div>
+
+<div id="info-card">
+    <div id="card-content">
+        <div id="telegram-info" class="card-info">
+            <img src="assets/images/discord.png" class="social-icon" alt="Telegram">
+            <span>ТГК: Black/White</span>
+            <button class="go-button" onclick="window.open('https://t.me/black_white_kf1')">Перейти</button>
+        </div>
+        <div id="discord-info" class="card-info" style="display: none;">
+            <img src="assets/images/telegram.png" class="social-icon" alt="Telegram">
+            <span>Tелеграм: @psychogung7</span>
+            <button class="go-button" onclick="window.open('https://t.me/psychogung7')">Перейти</button>
+        </div>
+        <div id="quote-info" class="card-info" style="display: none;">
+            <img src="assets/images/quote.png" class="social-icon" alt="Telegram">
+            <span>TГК: Харизма Black</span>
+            <button class="go-button" onclick="window.open('https://t.me/harizma_black')">Перейти</button>
+        </div>
+    </div>
+</div>
+    
+    <div class="dark-audio-player">
+        <div class="now-playing">Choose Life</div>
+        <div class="player-controls">
+            <button class="play-pause-btn">❚❚</button>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                    <div class="progress-thumb"></div>
+                </div>
+                <div class="time">0:00 / 0:00</div>
+            </div>
+            <div class="volume-controls">
+                <button class="volume-btn">🔊</button>
+                <div class="volume-container">
+                    <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.5">
+                </div>
+            </div>
+        </div>
+        <div class="playlist">
+            <div class="playlist-item active" data-song="1">Choose Life</div>
+            <div class="playlist-item" data-song="2">Don't Drive</div>
+            <div class="playlist-item" data-song="3">Hills Have Eyes</div>
+            <div class="playlist-item" data-song="4">Don't Look at Me</div>
+        </div>
+    </div>
+    
+    <audio id="audio-player" loop></audio>
+    
+    <script src="js/audio-player.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        createFloatingTexts();
+        
+        setInterval(createFloatingTexts, 120000);
+    });
+</script>
+</body>
+</html>
