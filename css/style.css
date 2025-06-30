@@ -16,13 +16,13 @@ body {
     }
         
         #buttons-container {
-    display: flex;
-    flex-direction: row; /* Горизонтальное расположение */
-    justify-content: center; /* Центрирование по горизонтали */
-    flex-wrap: wrap; /* Перенос на новую строку если не помещаются */
-    gap: 15px; /* Расстояние между кнопками */
-    margin-top: 30px;
-}
+            display: flex;
+            flex-direction: row; /* Горизонтальное расположение */
+            justify-content: center; /* Центрирование по горизонтали */
+            flex-wrap: wrap; /* Перенос на новую строку если не помещаются */
+            gap: 15px; /* Расстояние между кнопками */
+            margin-top: 30px;
+        }
         
         #background {
             position: absolute;
@@ -34,7 +34,7 @@ body {
             background-size: cover;
             background-position: center;
             transition: all 0.5s ease;
-            filter: brightness(0.4);
+            filter: brightness(0.6);
         }
         
         #start-screen {
